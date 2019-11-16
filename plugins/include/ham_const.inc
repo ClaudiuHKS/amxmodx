@@ -38,7 +38,7 @@
  *       careful, and test carefully and adequately!
  * @note All functions take (and pass) a "this" index as the first param.
  *       This is the entity from which the function is being executed on.
- * @note All functions and forwards (eg: {Register,Execute}Ham[B]) require
+ * @note All functions and forwards (eg: {Register, Execute} Ham[B]) require
  *       the mod to have the pev and base keys in addition to the function
  *       keys for the corresponding mod/operating system in gamedata
  * @note Some functions that return booleans may need to be logically ANDed

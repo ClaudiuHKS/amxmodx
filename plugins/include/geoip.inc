@@ -98,9 +98,9 @@ native geoip_country(const ip[], result[], len = 45);
  * @param len       The maximum length of the result buffer.
  * @param id        An optional player's index in order to return the result
  *                  in the player's language, if supported.
- *                  -1: the default language, which is english.
- *                   0: the server language. You can use LANG_SERVER define.
- *                 >=1: the player's language.
+ *                  -1   : the default language, which is english.
+ *                  0    : the server language. You can use LANG_SERVER define.
+ *                  >= 1 : the player's language.
  *
  * @return          The result length on successful lookup, 0 otherwise.
  */
@@ -117,9 +117,9 @@ native geoip_country_ex(const ip[], result[], len, id = -1);
  * @param len       The maximum length of the result buffer.
  * @param id        An optional player's index in order to return the result
  *                  in the player's language, if supported.
- *                  -1: the default language, which is english.
- *                   0: the server language. You can use LANG_SERVER define.
- *                 >=1: the player's language.
+ *                  -1   : the default language, which is english.
+ *                  0    : the server language. You can use LANG_SERVER define.
+ *                  >= 1 : the player's language.
  *
  * @return          The result length on successful lookup, 0 otherwise.
  */
@@ -151,9 +151,9 @@ native geoip_region_code(const ip[], result[], len);
  * @param len       The maximum length of the result buffer.
  * @param id        An optional player's index in order to return the result
  *                  in the player's language, if supported.
- *                  -1: the default language, which is english.
- *                   0: the server language. You can use LANG_SERVER define.
- *                 >=1: the player's language.
+ *                  -1   : the default language, which is english.
+ *                  0    : the server language. You can use LANG_SERVER define.
+ *                  >= 1 : the player's language.
  *
  * @return          The result length on successful lookup, 0 otherwise.
  */
@@ -255,9 +255,9 @@ native Continent:geoip_continent_code(const ip[], result[3]);
  * @param len       The maximum length of the result buffer.
  * @param id        An optional player's index in order to return the result
  *                  in the player's language, if supported.
- *                  -1: the default language, which is english.
- *                   0: the server language. You can use LANG_SERVER define.
- *                 >=1: the player's language.
+ *                  -1   : the default language, which is english.
+ *                  0    : the server language. You can use LANG_SERVER define.
+ *                  >= 1 : the player's language.
  *
  * @return          The result length on successful lookup, 0 otherwise.
  */

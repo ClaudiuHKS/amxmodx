@@ -151,4 +151,4 @@ native nvault_remove(vault, const key[]);
  * @noreturn
  * @error               On invalid vault handle.
  */
-native nvault_touch(vault, const key[], timestamp=-1);
+native nvault_touch(vault, const key[], timestamp = -1);

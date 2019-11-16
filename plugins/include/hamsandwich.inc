@@ -44,7 +44,7 @@
  * @param specialbot	Whether or not to enable support for bot without "player" classname.
  * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
-native HamHook:RegisterHam(Ham:function, const EntityClass[], const Callback[], Post=0, bool:specialbot = false);
+native HamHook:RegisterHam(Ham:function, const EntityClass[], const Callback[], Post = 0, bool:specialbot = false);
 
 /**
  * Hooks the virtual table for the player class.
@@ -56,7 +56,7 @@ native HamHook:RegisterHam(Ham:function, const EntityClass[], const Callback[], 
  * @param post			Whether or not to forward this in post.
  * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
-stock HamHook:RegisterHamPlayer(Ham:function, const Callback[], Post=0)
+stock HamHook:RegisterHamPlayer(Ham:function, const Callback[], Post = 0)
 {
 	return RegisterHam(function, "player", Callback, Post, true);
 }
@@ -74,8 +74,7 @@ stock HamHook:RegisterHamPlayer(Ham:function, const Callback[], Post=0)
  * @param post			Whether or not to forward this in post.
  * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
-native HamHook:RegisterHamFromEntity(Ham:function, EntityId, const Callback[], Post=0);
-
+native HamHook:RegisterHamFromEntity(Ham:function, EntityId, const Callback[], Post = 0);
 
 /**
  * Stops a ham forward from triggering.
@@ -363,7 +362,7 @@ native FreeHamItemInfo(itemInfo_handle);
 native bool:IsHamValid(Ham:function);
 
 /**
- * This is used to compliment fakemeta's {get,set}_pdata_{int,float,string}.
+ * This is used to compliment fakemeta's {get, set}_pdata_{int, float, string}.
  * This requires the mod to have the pev and base fields set in hamdata.ini.
  * Note this dereferences memory! Improper use of this will crash the server.
  * This will return an index of the corresponding cbase field in private data.
@@ -375,10 +374,10 @@ native bool:IsHamValid(Ham:function);
  * @param macdiff		The mac os x difference of the data.
  * @return				The index of the corresponding pdata field. -1 for none set.
  */
-native get_pdata_cbase(id, offset, linuxdiff=5, macdiff=5);
+native get_pdata_cbase(id, offset, linuxdiff = 5, macdiff = 5);
 
 /**
- * This is used to compliment fakemeta's {get,set}_pdata_{int,float,string}.
+ * This is used to compliment fakemeta's {get, set}_pdata_{int, float, string}.
  * This requires the mod to have the pev and base fields set in hamdata.ini.
  * This will set the corresponding cbase field in private data with the index.
  * Pass -1 to null the entry.
@@ -389,7 +388,7 @@ native get_pdata_cbase(id, offset, linuxdiff=5, macdiff=5);
  * @param linuxdiff		The linux difference of the data.
  * @param macdiff		The mac os x difference of the data.
  */
-native set_pdata_cbase(id, offset, value, linuxdiff=5, macdiff=5);
+native set_pdata_cbase(id, offset, value, linuxdiff = 5, macdiff = 5);
 
 /**
  * This is similar to the get_pdata_cbase, however it does not dereference memory.
@@ -404,10 +403,7 @@ native set_pdata_cbase(id, offset, value, linuxdiff=5, macdiff=5);
  * @param macdiff		The mac os x difference of the data.
  * @return				The index of the corresponding pdata field, -1 for null, -2 for invalid.
  */
-native get_pdata_cbase_safe(id, offset, linuxdiff=5, macdiff=5);
-
-
-
+native get_pdata_cbase_safe(id, offset, linuxdiff = 5, macdiff = 5);
 
 // This is the callback from the module, this handles any fatal errors.
 // This will in turn call the "HamFilter(Ham:id, HamError:err, const reason[])" public, if it exists.
@@ -415,25 +411,26 @@ native get_pdata_cbase_safe(id, offset, linuxdiff=5, macdiff=5);
 // Any other return value will fail the plugin.
 // You do not need to have a HamFilter, if there is none, all fatal errors will fail the plugin.
 // Do not modify this!
+//
 public __fatal_ham_error(Ham:id, HamError:err, const reason[])
 {
-	
-	new func=get_func_id("HamFilter", -1);
-	new bool:fail=true;
-	
-	if (func != -1 && callfunc_begin_i(func, -1)==1)
+	new func = get_func_id("HamFilter", -1);
+	new bool:fail = true;
+
+	if (func != -1 && callfunc_begin_i(func, -1) == 1)
 	{
 		callfunc_push_int(_:id);
 		callfunc_push_int(_:err);
 		callfunc_push_str(reason, false);
-		if (callfunc_end()==PLUGIN_HANDLED)
+
+		if (callfunc_end() == PLUGIN_HANDLED)
 		{
-			fail=false;
+			fail = false;
 		}
 	}
+
 	if (fail)
 	{
 		set_fail_state(reason);
 	}
-	
 }

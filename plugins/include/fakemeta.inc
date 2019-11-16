@@ -40,7 +40,7 @@
  * @param	_index		The entity index to lookup.
  * @param	_value		The pev field to lookup (look in fakemeta_const.inc)
  */
-native pev(_index,_value,any:...);
+native pev(_index, _value, any:...);
 
 /**
  * Sets entvar data for an entity.  Use the pev_* enum from fakemeta_const.inc for reference.
@@ -52,7 +52,7 @@ native pev(_index,_value,any:...);
  * @param	_index		The entity index to set the value on.
  * @param	_value		The pev field to set, (look in fakemeta_const.inc)
  */
-native set_pev(_index,_value,any:...);
+native set_pev(_index, _value, any:...);
 
 /**
  * Use this native to set a pev field to a string that is already allocated (via a function such
@@ -409,16 +409,16 @@ native set_pdata_ehandle(_index, _offset, _value, _linuxdiff = 20, _macdiff = 20
 /* Registers a forward.
  * Returns an id you can pass to unregister_forward
  */
-native register_forward(_forwardType,const _function[],_post=0);
+native register_forward(_forwardType, const _function[], _post = 0);
 
 /* Unregisters a forward.
  * The registerId must be from register_forward, and
  * post/forwardtype must match what you registered the forward as.
  */
-native unregister_forward(_forwardType, registerId, post=0);
+native unregister_forward(_forwardType, registerId, post = 0);
 
 /* Returns data for metamod */
-native forward_return(type,any:...);
+native forward_return(type, any:...);
 
 /* Returns the original return value of an engine function. 
  * This is only valid in forwards that were registered as post.
@@ -429,8 +429,8 @@ native forward_return(type,any:...);
  */
 native get_orig_retval(any:...);
 
-native engfunc(type,any:...);
-native dllfunc(type,any:...);
+native engfunc(type, any:...);
+native dllfunc(type, any:...);
 
 //only use this with functions that pass a Trace
 // get: zero extra params - return int, one extra param = byref float or vector
@@ -518,7 +518,7 @@ native set_uc(uc_handle, UserCmd:member, any:...);
 //linux value is what to add to the offset for linux servers.
 //mac value is what to add to the offset for os x servers. Default (cellmin) means that linux value will be used.
 //this cannot use a default value due to older version using an awkward default value.
-native get_pdata_string(entity, offset, dest[], maxlength, byref=1, linux, mac=cellmin);
+native get_pdata_string(entity, offset, dest[], maxlength, byref = 1, linux, mac = cellmin);
 
 //Sets a string in a private offset.
 //realloc = -1 - nonbyref copy (static
@@ -528,7 +528,7 @@ native get_pdata_string(entity, offset, dest[], maxlength, byref=1, linux, mac=c
 //linux value is what to add to the offset for linux servers.
 //mac value iswhat to add to the offset for os x servers.
 //this cannot use a default value due to older version using an awkward default value.
-native set_pdata_string(entity, offset, const source[], realloc=2, linux, mac=cellmin);
+native set_pdata_string(entity, offset, const source[], realloc = 2, linux, mac = cellmin);
 
 // Copies the given infoBuffer pointer into out[]
 // An infoBuffer pointer is returned by EngFunc_GetInfoKeyBuffer
@@ -1069,8 +1069,8 @@ stock BaseFieldType:get_field_basetype(FieldType:type, type_name[] = "", maxlen 
 
 	switch (type)
 	{
-		case FIELD_INTEGER, FIELD_STRINGINT, FIELD_SHORT  , FIELD_CHARACTER,
-			 FIELD_CLASS  , FIELD_STRUCTURE, FIELD_POINTER, FIELD_FUNCTION,
+		case FIELD_INTEGER, FIELD_STRINGINT, FIELD_SHORT,   FIELD_CHARACTER,
+			 FIELD_CLASS,   FIELD_STRUCTURE, FIELD_POINTER, FIELD_FUNCTION,
 			 FIELD_BOOLEAN:
 		{
 			baseType = BASEFIELD_INTEGER;

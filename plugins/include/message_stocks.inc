@@ -32,7 +32,7 @@ stock dod_make_deathmsg(killer, victim, weaponNUM)
 	{
 		msgid = get_user_msgid("DeathMsg");
 	}
-	message_begin(MSG_ALL, msgid, {0,0,0}, 0);
+	message_begin(MSG_ALL, msgid, {0, 0, 0}, 0);
 	write_byte(killer);
 	write_byte(victim);
 	write_byte(weaponNUM);
@@ -82,7 +82,7 @@ stock make_deathmsg(killer, victim, headshot, const weapon[])
 	{
 		msgid = get_user_msgid("DeathMsg");
 	}
-	message_begin(MSG_ALL, msgid, {0,0,0}, 0);
+	message_begin(MSG_ALL, msgid, {0, 0, 0}, 0);
 	write_byte(killer);
 	write_byte(victim);
 
@@ -144,11 +144,11 @@ stock client_printex(index, type, const msg_name[], const msg_param1[] = "", con
 	
 	static msgTextMsg; 
 	if (!msgTextMsg) 
-	{ 
+	{
 		msgTextMsg = get_user_msgid("TextMsg"); 
 	}
 
-	message_begin(index > 0 ? MSG_ONE_UNRELIABLE : MSG_BROADCAST, msgTextMsg, {0,0,0}, index);
+	message_begin(index > 0 ? MSG_ONE_UNRELIABLE : MSG_BROADCAST, msgTextMsg, {0, 0, 0}, index);
 	write_byte(type);
 	write_string(msg_name);
 	if (msg_param1[0]) { write_string(msg_param1); }

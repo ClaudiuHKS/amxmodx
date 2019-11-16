@@ -35,7 +35,7 @@
 #define MEXIT_NEVER		-1
 
 /**
- * Number of items per page (param1 = number, 0=no paginating, 7=default)
+ * Number of items per page (param1 = number, 0 = no paginating, 7 = default)
  */
 #define MPROP_PERPAGE	1
 
@@ -65,12 +65,12 @@
 #define MPROP_EXIT		6
 
 /**
- * Sets whether colors are not auto (param1 = number, 0=default)
+ * Sets whether colors are not auto (param1 = number, 0 = default)
  */
 #define MPROP_NOCOLORS	8
 
 /**
- * Color indicator to use for numbers (param1 = string, "\r"=default)
+ * Color indicator to use for numbers (param1 = string, "\r" = default)
  */
 #define MPROP_NUMBER_COLOR	10
 
@@ -155,7 +155,7 @@ native menu_makecallback(const function[]);
  * @noreturn
  * @error				Invalid menu resource.
  */
-native menu_additem(menu, const name[], const info[]="", paccess=0, callback=-1);
+native menu_additem(menu, const name[], const info[] = "", paccess = 0, callback = -1);
 
 /**
  * Returns the number of pages in a menu.
@@ -190,11 +190,11 @@ native menu_items(menu);
  * @param id			Client index.
  * @param menu			Menu resource identifier.
  * @param page			Page to start from (starting from 0).
- * @param time			If >=0 menu will timeout after this many seconds
+ * @param time			If >= 0 menu will timeout after this many seconds
  * @noreturn
  * @error				Invalid menu resource or client index.
  */
-native menu_display(id, menu, page=0, time=-1);
+native menu_display(id, menu, page = 0, time = -1);
 
 /**
  * Given a page on a menu and a keypress on that page, returns the item id selected.
@@ -222,7 +222,7 @@ native menu_find_id(menu, page, key);
  * @return				1 on success, 0 on failure.
  * @error				Invalid menu resource.
  */
-native menu_item_getinfo(menu, item, &access = 0, info[] = "", infolen = 0, name[]="", namelen=0, &callback = 0);
+native menu_item_getinfo(menu, item, &access = 0, info[] = "", infolen = 0, name[] = "", namelen = 0, &callback = 0);
 
 /**
  * Sets an item's display text.
@@ -255,7 +255,7 @@ native menu_item_setcmd(menu, item, const info[]);
  * @return				1 on success, 0 on failure.
  * @error				Invalid menu resource.
  */
-native menu_item_setcall(menu, item, callback=-1);
+native menu_item_setcall(menu, item, callback = -1);
 
 /**
  * Destroys a menu.  Player menus will be cancelled (although may still linger 
@@ -291,12 +291,12 @@ native menu_destroy(menu);
  * @return				1 if the player is viewing a menu, 0 otherwise.
  * @error				Invalid client.
  */
-native player_menu_info(id, &menu, &newmenu, &menupage=0);
+native player_menu_info(id, &menu, &newmenu, &menupage = 0);
 
 /**
  * Adds a blank line to a menu.
  * 
- * When using slot=1 this might break your menu. To achieve this functionality
+ * When using slot = 1 this might break your menu. To achieve this functionality
  * menu_addblank2 should be used.
  * 
  * @param menu			Menu resource identifier.
@@ -305,12 +305,12 @@ native player_menu_info(id, &menu, &newmenu, &menupage=0);
  * @noreturn
  * @error				Invalid menu resource.
  */
-native menu_addblank(menu, slot=1);
+native menu_addblank(menu, slot = 1);
 
 /**
  * Adds a text line to a menu.  Only available in amxmodx 1.8.1 and above.
  *
- * When using slot=1 this might break your menu. To achieve this functionality
+ * When using slot = 1 this might break your menu. To achieve this functionality
  * menu_addtext2 should be used.
  * 
  * @param menu			Menu resource identifier.
@@ -320,7 +320,7 @@ native menu_addblank(menu, slot=1);
  * @noreturn
  * @error				Invalid menu resource.
  */
-native menu_addtext(menu, const text[], slot=1);
+native menu_addtext(menu, const text[], slot = 1);
 
 /**
  * Adds a blank line to a menu, always shifting the numbering down.

@@ -46,7 +46,7 @@ enum Handle
  * 	
  * @return              A newly created tuple handle to be used in connection routines.
  */
-native Handle:SQL_MakeDbTuple(const host[], const user[], const pass[], const db[], timeout=0);
+native Handle:SQL_MakeDbTuple(const host[], const user[], const pass[], const db[], timeout = 0);
 
 
 /**
@@ -178,7 +178,7 @@ native SQL_QuoteStringFmt(Handle:db, buffer[], buflen, const fmt[], any:...);
  *                      Invalid info tuple handle.
  *                      Handler function not found.
  */
-native SQL_ThreadQuery(Handle:db_tuple, const handler[], const query[], const data[]="", dataSize=0);
+native SQL_ThreadQuery(Handle:db_tuple, const handler[], const query[], const data[] = "", dataSize = 0);
 
 
 /**
@@ -458,7 +458,7 @@ stock bool:sqlite_TableExists(Handle:db, const table[])
  * 
  * @return              1 on success, 0 on failure.
  */
-stock SQL_SimpleQuery(Handle:db, const query[], error[]="", maxlength=0, &rows=0)
+stock SQL_SimpleQuery(Handle:db, const query[], error[] = "", maxlength = 0, &rows = 0)
 {
 	new Handle:hQuery = SQL_PrepareQuery(db, "%s", query);
 	
@@ -491,7 +491,7 @@ stock SQL_SimpleQuery(Handle:db, const query[], error[]="", maxlength=0, &rows=0
  * 
  * @return              1 on success, 0 on failure.
  */
-stock SQL_SimpleQueryFmt(Handle:db, error[]="", maxlength=0, &rows=0, const fmt[], any:...)
+stock SQL_SimpleQueryFmt(Handle:db, error[] = "", maxlength = 0, &rows = 0, const fmt[], any:...)
 {
 	static query_buf[2048];
 	vformat(query_buf, 2047, fmt, 6);

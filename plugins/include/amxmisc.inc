@@ -118,10 +118,10 @@ stock access(id, level)
 /**
  * cmd_target flags
  */
-#define CMDTARGET_OBEY_IMMUNITY (1<<0) // Obey immunity
-#define CMDTARGET_ALLOW_SELF    (1<<1) // Allow self targeting
-#define CMDTARGET_ONLY_ALIVE    (1<<2) // Target must be alive
-#define CMDTARGET_NO_BOTS       (1<<3) // Target can't be a bot
+#define CMDTARGET_OBEY_IMMUNITY (1 << 0) // Obey immunity
+#define CMDTARGET_ALLOW_SELF    (1 << 1) // Allow self targeting
+#define CMDTARGET_ONLY_ALIVE    (1 << 2) // Target must be alive
+#define CMDTARGET_NO_BOTS       (1 << 3) // Target can't be a bot
 
 /**
  * Processes a generic target pattern and tries to match it to a client based
@@ -283,7 +283,7 @@ stock show_activity(id, const name[], const fmt[], any:...)
 		}
 		case 2: // show name to all
 		{
-			client_print(0, print_chat, "%L %s: %s", LANG_PLAYER, prefix , name , buffer);
+			client_print(0, print_chat, "%L %s: %s", LANG_PLAYER, prefix, name, buffer);
 		}
 		case 1: // hide name to all
 		{

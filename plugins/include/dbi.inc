@@ -38,13 +38,13 @@
 
 enum Sql
 {
-	SQL_FAILED=0,
+	SQL_FAILED = 0,
 	SQL_OK
 };
 
 enum Result
 {
-	RESULT_FAILED=-1,
+	RESULT_FAILED = -1,
 	RESULT_NONE,
 	RESULT_OK
 };
@@ -54,7 +54,7 @@ enum Result
  * The return value will otherwise be a resource handle, not an
  * OK code or cell pointer.
  */
-native Sql:dbi_connect(_host[], _user[], _pass[], _dbname[], _error[]="", _maxlength=0);
+native Sql:dbi_connect(_host[], _user[], _pass[], _dbname[], _error[] = "", _maxlength = 0);
 
 /* This will do a simple query execution on the SQL server.
  * If it fails, it will return a number BELOW ZERO (0)

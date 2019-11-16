@@ -784,22 +784,22 @@ stock fm_set_user_longjump(index, bool:longjump = true, bool:tempicon = true) {
 #define WEAPON_SUIT 31
 
 stock bool:fm_get_user_suit(index) {
-	return bool:(!(!(pev(index, pev_weapons) & (1<<WEAPON_SUIT)))); // i'm not insane, this is a trick!
+	return bool:(!(!(pev(index, pev_weapons) & (1 << WEAPON_SUIT)))); // i'm not insane, this is a trick!
 }
 
 stock fm_set_user_suit(index, bool:suit = true, bool:sound = true) {
 	new weapons = pev(index, pev_weapons);
 	if (!suit)
-		set_pev(index, pev_weapons, weapons & ~(1<<WEAPON_SUIT));
-	else if (!(weapons & (1<<WEAPON_SUIT))) {
-		set_pev(index, pev_weapons, weapons | (1<<WEAPON_SUIT));
+		set_pev(index, pev_weapons, weapons & ~(1 << WEAPON_SUIT));
+	else if (!(weapons & (1 << WEAPON_SUIT))) {
+		set_pev(index, pev_weapons, weapons | (1 << WEAPON_SUIT));
 		if (sound)
 			emit_sound(index, CHAN_VOICE, "items/tr_kevlar.wav", VOL_NORM, ATTN_NORM, 0, PITCH_NORM);
 	}
 }
 
-#define FEV_RELIABLE (1<<1)
-#define FEV_GLOBAL (1<<2)
+#define FEV_RELIABLE  (1 << 1)
+#define FEV_GLOBAL    (1 << 2)
 
 // removes all created decals and players' corpses from the world
 // set a specific index to remove decals only for the given client

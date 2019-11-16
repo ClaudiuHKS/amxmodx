@@ -59,7 +59,7 @@ stock char_to_upper(chr)
 {
 	if (is_char_lower(chr))
 	{
-		return (chr & ~(1<<5));
+		return (chr & ~(1 << 5));
 	}
 
 	return chr;
@@ -78,7 +78,7 @@ stock char_to_lower(chr)
 {
 	if (is_char_upper(chr))
 	{
-		return (chr | (1<<5));
+		return (chr | (1 << 5));
 	}
 
 	return chr;
@@ -299,9 +299,9 @@ stock implode_strings(const strings[][], numStrings, const join[], buffer[], max
 	new total, length, part_length;
 	new join_length = strlen(join);
 
-	for (new i=0; i<numStrings; i++)
+	for (new i = 0; i < numStrings; i++)
 	{
-		length = copy(buffer[total], maxLength-total, strings[i]);
+		length = copy(buffer[total], maxLength - total, strings[i]);
 		total += length;
 
 		if (length < part_length)
@@ -311,7 +311,7 @@ stock implode_strings(const strings[][], numStrings, const join[], buffer[], max
 
 		if (i != numStrings - 1)
 		{
-			length = copy(buffer[total], maxLength-total, join);
+			length = copy(buffer[total], maxLength - total, join);
 			total += length;
 
 			if (length < join_length)

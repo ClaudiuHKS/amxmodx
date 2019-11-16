@@ -1178,31 +1178,31 @@ stock CsWeaponClassType:cs_get_weapon_class(weapon_id)
 			{
 				new const bits = (1 << weapon_id);
 
-				if(bits & CSI_ALL_PISTOLS)
+				if (bits & CSI_ALL_PISTOLS)
 				{
 					type = CS_WEAPONCLASS_PISTOL;
 				}
-				else if(bits & CSI_ALL_GRENADES)
+				else if (bits & CSI_ALL_GRENADES)
 				{
 					type = CS_WEAPONCLASS_GRENADE;
 				}
-				else if(bits & CSI_ALL_SMGS)
+				else if (bits & CSI_ALL_SMGS)
 				{
 					type = CS_WEAPONCLASS_SUBMACHINEGUN;
 				}
-				else if(bits & CSI_ALL_SHOTGUNS)
+				else if (bits & CSI_ALL_SHOTGUNS)
 				{
 					type = CS_WEAPONCLASS_SHOTGUN;
 				}
-				else if(bits & CSI_ALL_MACHINEGUNS)
+				else if (bits & CSI_ALL_MACHINEGUNS)
 				{
 					type = CS_WEAPONCLASS_MACHINEGUN;
 				}
-				else if(bits & CSI_ALL_RIFLES)
+				else if (bits & CSI_ALL_RIFLES)
 				{
 					type = CS_WEAPONCLASS_RIFLE;
 				}
-				else if(bits & CSI_ALL_SNIPERRIFLES)
+				else if (bits & CSI_ALL_SNIPERRIFLES)
 				{
 					type = CS_WEAPONCLASS_SNIPERRIFLE;
 				}

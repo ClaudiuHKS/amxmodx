@@ -221,7 +221,7 @@ native TrieGetSize(Trie:handle);
 
 /**
  * Creates a snapshot of all keys in a hash map. If the map is changed
- * afterwards,  the changes are not reflected in the snapshot.
+ * afterwards, the changes are not reflected in the snapshot.
  * Keys are not sorted.
  *
  * @param handle    Map handle

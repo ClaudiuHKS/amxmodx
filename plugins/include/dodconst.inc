@@ -13,21 +13,22 @@
 #define _dodconst_included
 
 /* DoD teams */
-#define ALLIES			1
-#define AXIS 			2
+#define ALLIES          1
+#define AXIS            2
 
-#define FT_NEW			1<<0
-#define FT_OLD			1<<1
+#define FT_NEW          (1 << 0)
+#define FT_OLD          (1 << 1)
 
-#define STAMINA_SET		0
-#define STAMINA_RESET		1
+#define STAMINA_SET     0
+#define STAMINA_RESET   1
 
-#define FUSE_SET		0
-#define FUSE_RESET		1
+#define FUSE_SET        0
+#define FUSE_RESET      1
 
-#define DODMAX_WEAPONS		46 // 5 slots for custom weapons
+#define DODMAX_WEAPONS  46  // 5 slots for custom weapons
 
 // DoD Weapon Types
+//
 enum
 {
 	DODWT_PRIMARY = 0,
@@ -38,18 +39,21 @@ enum
 };
 
 // Ammo Channels
-#define AMMO_SMG 1 		// thompson, greasegun, sten, mp40
-#define AMMO_ALTRIFLE 2 	// carbine, k43, mg34
-#define AMMO_RIFLE 3 		// garand, enfield, scoped enfield, k98, scoped k98
-#define AMMO_PISTOL 4 		// colt, webley, luger
-#define AMMO_SPRING 5 		// springfield
-#define AMMO_HEAVY 6 		// bar, bren, stg44, fg42, scoped fg42
-#define AMMO_MG42 7    		// mg42
-#define AMMO_30CAL 8 		// 30cal
-#define AMMO_GREN 9 		// grenades (should be all 3 types)
-#define AMMO_ROCKET 13 		// bazooka, piat, panzerschreck
-enum { 
-	PS_NOPRONE =0,
+//
+
+#define AMMO_SMG       1  // thompson, greasegun, sten, mp40
+#define AMMO_ALTRIFLE  2  // carbine, k43, mg34
+#define AMMO_RIFLE     3  // garand, enfield, scoped enfield, k98, scoped k98
+#define AMMO_PISTOL    4  // colt, webley, luger
+#define AMMO_SPRING    5  // springfield
+#define AMMO_HEAVY     6  // bar, bren, stg44, fg42, scoped fg42
+#define AMMO_MG42      7  // mg42
+#define AMMO_30CAL     8  // 30cal
+#define AMMO_GREN      9  // grenades (should be all 3 types)
+#define AMMO_ROCKET    13 // bazooka, piat, panzerschreck
+
+enum {
+	PS_NOPRONE = 0,
 	PS_PRONE,
 	PS_PRONEDEPLOY,
 	PS_DEPLOY,
@@ -117,7 +121,7 @@ enum {
 	DODC_BAR, 
 	DODC_30CAL, 
 	DODC_BAZOOKA, 
-	//DODC_ALLIES_MORTAR,
+	// DODC_ALLIES_MORTAR,
 	DODC_KAR = 10, 
 	DODC_K43, 
 	DODC_MP40, 
@@ -128,13 +132,13 @@ enum {
 	DODC_MG34, 
 	DODC_MG42, 
 	DODC_PANZERJAGER, 
-	//DODC_AXIS_MORTAR,
+	// DODC_AXIS_MORTAR,
 	DODC_ENFIELD = 21, 
 	DODC_STEN, 
 	DODC_MARKSMAN, 
 	DODC_BREN, 
 	DODC_PIAT, 
-	//DODC_BRIT_MORTAR,
+	// DODC_BRIT_MORTAR,
 };
 
 /* DoD stats constants */

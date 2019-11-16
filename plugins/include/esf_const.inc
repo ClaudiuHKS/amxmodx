@@ -40,7 +40,7 @@ enum
 
 enum
 {
-	Attack_Kamehameha=1,
+	Attack_Kamehameha = 1,
 	Attack_SpiritBomb,
 	Attack_GalletGun,
 	Attack_FinalFlash,
@@ -52,7 +52,7 @@ enum
 
 enum
 {
-	Direction_Left=1,
+	Direction_Left = 1,
 	Direction_Right,
 	Direction_Up,
 	Direction_Down,
@@ -62,7 +62,7 @@ enum
 
 enum 
 {
-	Recovery_Kicked=1,
+	Recovery_Kicked = 1,
 	Recovery_Tumbled,
 	Recovery_Lying,
 	Recovery_Thrown,
