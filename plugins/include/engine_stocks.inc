@@ -227,9 +227,10 @@ stock set_size(index, const Float:mins[3], const Float:maxs[3])
 	return entity_set_size(index, mins, maxs);
 }
 
-//by Twilight Suzuka, request addition at29428
-//"Lifted from HLSDK"
-stock IsInWorld( ent )
+// by Twilight Suzuka, request addition at29428
+// "Lifted from HLSDK"
+//
+stock IsInWorld(ent)
 {
    new Float:origin[3];
    entity_get_vector(ent, EV_VEC_origin, origin);

@@ -124,24 +124,28 @@ stock client_printex(index, type, const msg_name[], const msg_param1[] = "", con
 
 	// If not a predefined message, we don't care about it and forward directly to client_print.
 	// Special case for radio message. msg_name is an index, msg_param1 #Game_radio*, etc. Checking index should be enough.
+	//
 	if (ch != '#' && (type != print_radio || !strtol(msg_name)))
 	{
 		return client_print(index, type, msg_name, msg_param1, msg_param2, msg_param3, msg_param4);
 	}
 
 	// Even if message starts with '#', we should check its length for safety.
+	//
 	new length = strlen(msg_name);
 
 	// If string is larger than expected, we forward to client_print which will cut message properly.
 	// This means also this can't be a predefined game message.
+	//
 	//   Max console length: 128 = \n (126) + \0 (127)
 	//   Max SayText length: 192 = \n (190) + \0 (191)
-	if ((length > 126 && (print_notify <= type <= print_console)) 
-	|| ( length > 190 && (print_chat   <= type <= print_radio)))
+	//
+	if ((length > 126 && (print_notify <= type <= print_console)) ||
+		(length > 190 && (print_chat   <= type <= print_radio)))
 	{
 		return client_print(index, type, msg_name, msg_param1, msg_param2, msg_param3, msg_param4);
 	}
-	
+
 	static msgTextMsg; 
 	if (!msgTextMsg) 
 	{
@@ -156,6 +160,6 @@ stock client_printex(index, type, const msg_name[], const msg_param1[] = "", con
 	if (msg_param3[0]) { write_string(msg_param3); }
 	if (msg_param4[0]) { write_string(msg_param4); }
 	message_end();
-	
+
 	return 1;
 }

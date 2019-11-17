@@ -93,13 +93,13 @@ enum {
 	EngFunc_GetBonePosition,			// void )			(const edict_t *pEdict, int iBone, float *rgflOrigin, float *rgflAngles);
 	EngFunc_GetAttachment,				// void	)			(const edict_t *pEdict, int iAttachment, float *rgflOrigin, float *rgflAngles);
 	EngFunc_SetView,					// void )			(const edict_t *pClient, const edict_t *pViewent);
-	EngFunc_Time,						// float)			( void );
+	EngFunc_Time,						// float)			(void);
 	EngFunc_CrosshairAngle,				// void )			(const edict_t *pClient, float pitch, float yaw);
 	EngFunc_FadeClientVolume,			// void )			(const edict_t *pEdict, int fadePercent, int fadeOutSeconds, int holdTime, int fadeInSeconds);
 	EngFunc_SetClientMaxspeed,			// void )			(const edict_t *pEdict, float fNewMaxspeed);
 	EngFunc_CreateFakeClient,			// edict)			(const char *netname);	// returns NULL if fake client can't be created
 	EngFunc_RunPlayerMove,				// void )			(edict_t *fakeclient, const float *viewangles, float forwardmove, float sidemove, float upmove, unsigned short buttons, byte impulse, byte msec);
-	EngFunc_NumberOfEntities,			// int  )			( void );
+	EngFunc_NumberOfEntities,			// int  )			(void);
 	EngFunc_StaticDecal,				// void )			(const float *origin, int decalIndex, int entityIndex, int modelIndex);
 	EngFunc_PrecacheGeneric,			// int  )			(char* s);
 	EngFunc_BuildSoundMsg,				// void )			(edict_t *entity, int channel, const char *sample, /*int*/float volume, float attenuation, int fFlags, int pitch, int msg_dest, int msg_type, const float *pOrigin, edict_t *ed);
@@ -109,7 +109,7 @@ enum {
 	EngFunc_PrecacheEvent,				// unsigned short)	(int type, const char*psz);
 	EngFunc_PlaybackEvent,				// void )			(int flags, const edict_t *pInvoker, unsigned short eventindex, float delay, float *origin, float *angles, float fparam1, float fparam2, int iparam1, int iparam2, int bparam1, int bparam2);
 	EngFunc_CheckVisibility,			// int  )			(const edict_t *entity, unsigned char *pset);
-	EngFunc_GetCurrentPlayer,			// int  )			( void );
+	EngFunc_GetCurrentPlayer,			// int  )			(void);
 	EngFunc_CanSkipPlayer,				// int  )			(const edict_t *player);
 	EngFunc_SetGroupMask,				// void )			(int mask, int op);
 	EngFunc_GetClientListening,			// bool )			(int iReceiver, int iSender)
@@ -133,7 +133,7 @@ enum {
  */
 enum
 {
-	DLLFunc_GameInit,					// void )			( void );				
+	DLLFunc_GameInit,					// void )			(void);				
 	DLLFunc_Spawn,						// int  )			(edict_t *pent);
 	DLLFunc_Think,						// void )			(edict_t *pent);
 	DLLFunc_Use,						// void )			(edict_t *pentUsed, edict_t *pentOther);
@@ -150,18 +150,18 @@ enum
 	DLLFunc_ClientPutInServer,			// void )			(edict_t *pEntity);
 	DLLFunc_ClientCommand,				// void )			(edict_t *pEntity);
 
-	DLLFunc_ServerDeactivate,			// void )			( void );
+	DLLFunc_ServerDeactivate,			// void )			(void);
 
 	DLLFunc_PlayerPreThink,				// void )			(edict_t *pEntity);
 	DLLFunc_PlayerPostThink,			// void )			(edict_t *pEntity);
 
-	DLLFunc_StartFrame,					// void )			( void );
-	DLLFunc_ParmsNewLevel,				// void )			( void );
-	DLLFunc_ParmsChangeLevel,			// void )			( void );
+	DLLFunc_StartFrame,					// void )			(void);
+	DLLFunc_ParmsNewLevel,				// void )			(void);
+	DLLFunc_ParmsChangeLevel,			// void )			(void);
 
 	// Returns string describing current .dll.  E.g., TeamFotrress 2, Half-Life
 	// This also gets called when the server is queried for information (for example, by a server browser tool)
-	DLLFunc_GetGameDescription,	 		// const char *)	( void );     
+	DLLFunc_GetGameDescription,	 		// const char *)	(void);     
 
 	// Spectator funcs
 	DLLFunc_SpectatorConnect,			// void )			(edict_t *pEntity);
@@ -172,14 +172,14 @@ enum
 	DLLFunc_Sys_Error,					// void )			(const char *error_string);
 
 	DLLFunc_PM_FindTextureType,			// char )			(char *name);
-	DLLFunc_RegisterEncoders,			// void )			( void );
+	DLLFunc_RegisterEncoders,			// void )			(void);
 
 	// Enumerates player hulls.  Returns 0 if the hull number doesn't exist, 1 otherwise
 	DLLFunc_GetHullBounds,				// int  )			(int hullnumber, float *mins, float *maxs);
 
 	// Create baselines for certain "unplaced" items.
-	DLLFunc_CreateInstBaselines,		// void )			( void );
-	DLLFunc_pfnAllowLagCompensation,	// int  )			( void );
+	DLLFunc_CreateInstBaselines,		// void )			(void);
+	DLLFunc_pfnAllowLagCompensation,	// int  )			(void);
 	// I know this does not fit with DLLFUNC(), but I don't want another native just for it.
 	MetaFunc_CallGameEntity,			// bool	)			(plid_t plid, const char *entStr, entvars_t *pev);
 	DLLFunc_ClientUserInfoChanged,		// void	)			(edict *pEntity, char *infobuffer);

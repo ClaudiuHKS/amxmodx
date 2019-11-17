@@ -105,13 +105,13 @@ native dod_clear_model(id);
 
 /* Custom Weapon Support */
 /* function will return index of new weapon */
-native custom_weapon_add( const wpnname[], melee = 0, const logname[] = "" ); 
+native custom_weapon_add(const wpnname[], melee = 0, const logname[] = ""); 
 
 /* Function will pass damage done by this custom weapon to stats module and other plugins */
-native custom_weapon_dmg( weapon, att, vic, damage, hitplace = 0 ); 
+native custom_weapon_dmg(weapon, att, vic, damage, hitplace = 0); 
 
 /* Function will pass info about custom weapon shot to stats module */
-native custom_weapon_shot( weapon, index ); // weapon id, player id
+native custom_weapon_shot(weapon, index); // weapon id, player id
 
 /* function will return 1 if true */
 native xmod_is_melee_wpn(wpnindex);
@@ -139,7 +139,7 @@ native dod_wpnlog_to_name(const logname[], name[], len);
 /* weapon logname to weapon index convertion */
 native dod_wpnlog_to_id(const logname[]);
 
-native dod_get_map_info( info );
+native dod_get_map_info(info);
 
 /* Returns id of currently carried weapon. Gets also 
 * ammount of ammo in clip and backpack. */

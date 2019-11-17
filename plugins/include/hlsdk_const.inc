@@ -213,8 +213,8 @@
 * Gib values used on client kill based on instant damage values
 */
 #define GIB_NORMAL                      0      // Gib if entity was overkilled
-#define GIB_NEVER                       1      // Never gib, no matter how much death damage is done ( freezing, etc )
-#define GIB_ALWAYS                      2      // Always gib ( Houndeye Shock, Barnacle Bite )
+#define GIB_NEVER                       1      // Never gib, no matter how much death damage is done (freezing, etc)
+#define GIB_ALWAYS                      2      // Always gib (Houndeye Shock, Barnacle Bite)
 #define GIB_TRY_HEALTH                  -9000  // Gib players if their health is under this value. (GIB_NEVER overrides this value)
 
 /**
@@ -713,12 +713,12 @@
                                   // for this to work correctly on the server for anything
                                   // that depends on the event origin/angles.  I.e., the origin/angles are not
                                   // taken from the invoking edict for reliable events.
-#define FEV_GLOBAL      (1 << 2)  // Don't restrict to PAS/PVS, send this event to _everybody_ on the server ( useful for stopping CHAN_STATIC
-                                  //  sounds started by client event when client is not in PVS anymore ( hwguy in TFC e.g. ).
+#define FEV_GLOBAL      (1 << 2)  // Don't restrict to PAS/PVS, send this event to _everybody_ on the server (useful for stopping CHAN_STATIC
+                                  //  sounds started by client event when client is not in PVS anymore (hwguy in TFC e.g.).
 #define FEV_UPDATE      (1 << 3)  // If this client already has one of these events in its queue, just update the event instead of sending it as a duplicate
 #define FEV_HOSTONLY    (1 << 4)  // Only send to entity specified as the invoker
 #define FEV_SERVER      (1 << 5)  // Only send if the event was created on the server.
-#define FEV_CLIENT      (1 << 6)  // Only issue event client side ( from shared code )
+#define FEV_CLIENT      (1 << 6)  // Only issue event client side (from shared code)
 
 /**
  * Cap bits to indicate what an object's capabilities are, currently used for

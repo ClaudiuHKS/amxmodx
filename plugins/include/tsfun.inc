@@ -64,26 +64,26 @@ native ts_wpnlogtoid(const logname[]);
 
 // UNAVAILABLE IN 1.70
 //
-// native Float:ts_getusertime( index );        //!
-// native ts_setusertime( index, Float:time );  //!
+// native Float:ts_getusertime(index);
+// native ts_setusertime(index, Float:time);
 
-native ts_getusercash( index );
-native ts_setusercash( index, money );
+native ts_getusercash(index);
+native ts_setusercash(index, money);
 
-native ts_getuserslots( index );
-native ts_setuserslots( index, slots );
+native ts_getuserslots(index);
+native ts_setuserslots(index, slots);
 
-native ts_getuserstate( index );
-native ts_getuserwpn( index, &clip = 0, &ammo = 0, &mode = 0, &extra = 0 );
-native ts_getuserspace( index );
+native ts_getuserstate(index);
+native ts_getuserwpn(index, &clip = 0, &ammo = 0, &mode = 0, &extra = 0);
+native ts_getuserspace(index);
 
 native ts_getuserkillflags(killer);
-native ts_getkillingstreak( index );
-native ts_getuserlastfrag( index );
+native ts_getkillingstreak(index);
+native ts_getuserlastfrag(index);
 
-native ts_giveweapon( index, weapon, clips, extra );
+native ts_giveweapon(index, weapon, clips, extra);
 
-native ts_getuserpwup( index );
+native ts_getuserpwup(index);
 
 stock ts_has_slowmo(id) {
 	return (ts_getuserpwup(id) & TSPWUP_SLOWMO);
@@ -115,16 +115,16 @@ stock ts_has_armor(id) {
 
 /* Function will create pwup entity and return its index (pwupent)
  */
-native ts_createpwup( pwup );
+native ts_createpwup(pwup);
 
-native ts_givepwup( index, pwupent );
+native ts_givepwup(index, pwupent);
 
-native ts_setpddata( knifeoffset );
+native ts_setpddata(knifeoffset);
 
 // Alters a fu attack. Use with fu forward
 // UNAVAILABLE IN 1.70
 //
-// native ts_set_fuattack(id, Float:time, Float:damage);   //!
+// native ts_set_fuattack(id, Float:time, Float:damage);
 
 // Changes board message
 //
@@ -175,8 +175,8 @@ stock ts_is_theone(id) {
 // Return one on true, 0 on false
 // UNAVAILABLE IN 1.70
 //
-native ts_has_superjump(id);   //!
-native ts_has_fupowerup(id);   //!
+native ts_has_superjump(id);
+native ts_has_fupowerup(id);
 native ts_is_in_slowmo(id);
 
 // Get and set consecutive frags
