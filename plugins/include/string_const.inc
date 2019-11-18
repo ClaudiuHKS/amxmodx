@@ -21,7 +21,7 @@
 /**
  * @global  Unless otherwise noted, all string functions which take in a
  *          writable buffer and maximum length should NOT have the null terminator INCLUDED
- *          in the length.  This means that this is valid:
+ *          in the length. This means that this is valid:
  *          copy(string, charsmax(string), ...)
  */
 

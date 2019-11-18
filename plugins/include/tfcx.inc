@@ -45,9 +45,9 @@ forward client_death(killer, victim, wpnindex, hitplace, TK);
 
 /* Custom Weapon Support */
 /* function will return index of new weapon */
-native custom_weapon_add(const wpnname[], melee = 0, const logname[] = ""); 
+native custom_weapon_add(const wpnname[], melee = 0, const logname[] = "");
 /* Function will pass damage done by this custom weapon to stats module and other plugins */
-native custom_weapon_dmg(weapon, att, vic, damage, hitplace = 0); 
+native custom_weapon_dmg(weapon, att, vic, damage, hitplace = 0);
 /* Function will pass info about custom weapon shot to stats module */
 native custom_weapon_shot(weapon, index); // weapon id, player id
 
@@ -94,7 +94,7 @@ stock tfc_isgrenade(weapon)
 
 native tfc_userkill(index);
 
-/* Use this function to set private data offsets if needed 
+/* Use this function to set private data offsets if needed
 Default offsets:
 	timer: 932
 	sentrygun: 83
@@ -144,7 +144,7 @@ native tfc_get_user_goalitem(index, &team);
 /* Returns 1 if the player is a spy and is currently feigning death */
 native tfc_is_user_feigning(index);
 
-/* Returns 1 if the two teams are allies, 0 otherwise 
+/* Returns 1 if the two teams are allies, 0 otherwise
  * Note: Team must be 1->4
  *       Team 0 will always return 0
  *       Any other team will result in an error

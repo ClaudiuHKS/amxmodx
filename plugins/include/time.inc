@@ -17,7 +17,7 @@
 #define _time_included
 
 /* Time unit types for get_time_length() */
-enum 
+enum
 {
     timeunit_seconds = 0,
     timeunit_minutes,

@@ -26,7 +26,7 @@ enum NSGameplay
 	NSGame_MarineVMarine,	/**< Marine vs Marine */
 	NSGame_AlienVAlien,		/**< Alien  vs Alien  */
 
-	NSGame_Unknown,			/**< Can find the gameplay entity, but can't 
+	NSGame_Unknown,			/**< Can find the gameplay entity, but can't
 								 determine gameplay type. */
 };
 
@@ -73,7 +73,7 @@ enum {
 	MASK_WALLSTICKING = 524288,      // Flag for wall-sticking
 	MASK_PRIMALSCREAM = 1048576,     // Alien is in range of active primal scream
 	MASK_UMBRA = 2097152,            // In umbra
-	MASK_DIGESTING = 4194304,        // When set on a visible player, player is digesting.  When set on invisible player, player is being digested
+	MASK_DIGESTING = 4194304,        // When set on a visible player, player is digesting. When set on invisible player, player is being digested
 	MASK_RECYCLING = 8388608,        // Building is recycling
 	MASK_TOPDOWN = 16777216,         // Commander view
 	MASK_PLAYER_STUNNED = 33554432,  // Player has been stunned by stomp
@@ -152,9 +152,9 @@ enum NSPS_VelShape
 
 /* Genshape used in ns_set_ps_genshape
  * NOTE: The following are in the ns.ps file but
- *       are not listed in the .fgd file.  Use
+ *       are not listed in the .fgd file. Use
  *       at your own risk!
- *       Line, Triangle, Plane, Cylinder, 
+ *       Line, Triangle, Plane, Cylinder,
  *       Cone, Disc, Rectangle and None
  */
 enum NSPS_GenShape

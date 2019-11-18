@@ -101,7 +101,7 @@ enum /*RegexError*/
  * @note  Use this if you intend on using the same expression multiple times.
  *        Pass the regex handle returned here to regex_match_c to check for matches.
  *
- * @note  This handle is automatically freed on map change.  However,
+ * @note  This handle is automatically freed on map change. However,
  *        if you are completely done with it before then, you should
  *        call regex_free on this handle.
  *

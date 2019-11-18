@@ -183,11 +183,11 @@ forward client_disconnect(id);
 /**
  * Called when a client is disconnected from the server.
  *
- * @note This will be called in some additional cases that client_disconnect doesn't cover, 
- *       most notably when a client aborts the connection process. It is guaranteed to pair 
+ * @note This will be called in some additional cases that client_disconnect doesn't cover,
+ *       most notably when a client aborts the connection process. It is guaranteed to pair
  *       with the client_connect() forward.
  *
- * @note When this fires the player entity is still valid (e.g. is_user_connected(id) will 
+ * @note When this fires the player entity is still valid (e.g. is_user_connected(id) will
  *       return true), but no networked commands will reach the client.
  *
  * @param id         Client index
@@ -3372,8 +3372,8 @@ native bool:has_map_ent_class(const classname[]);
  * This includes servercfgfile (server.cfg), amxx.cfg, plugin's config, and
  * per-map config.
  *
- * @note This is best place to initialize plugin functions which are based on cvar data.  
- * @note This will always be called once and only once per map.  It will be 
+ * @note This is best place to initialize plugin functions which are based on cvar data.
+ * @note This will always be called once and only once per map. It will be
  *       called few seconds after plugin_cfg().
  *
  * @noreturn
@@ -3381,8 +3381,8 @@ native bool:has_map_ent_class(const classname[]);
 forward OnConfigsExecuted();
 
 /**
- * Called when the map has loaded, right after plugin_cfg() but any time 
- * before OnConfigsExecuted.  It's called after amxx.cfg and  all 
+ * Called when the map has loaded, right after plugin_cfg() but any time
+ * before OnConfigsExecuted. It's called after amxx.cfg and all
  * AutoExecConfig() exec commands have been added to the server command buffer.
  *
  * @note This will always be called once and only once per map.

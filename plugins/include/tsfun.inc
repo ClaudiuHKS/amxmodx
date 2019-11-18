@@ -49,7 +49,7 @@ forward client_stunt(id, stunttype, UNAVAILABLE);
 
 /* Function is called when powerups are ran,
  * Returns value of powerup. Use TSPWUP_*'s
- * to find exactly which one it is. 
+ * to find exactly which one it is.
  * UNAVAILABLE IN 1.70
  */
 forward client_powerup(id, powerup, UNAVAILABLE);

@@ -52,7 +52,7 @@ native dod_is_randomclass(index);
 /* Returns player deaths */
 native dod_get_pl_deaths(index);
 
-/* Sets player deaths. 
+/* Sets player deaths.
  * Note if you opt to refresh the scoreboard, it
  * will make the player appear as "DEAD" in the scoreboard.
  */
@@ -98,7 +98,7 @@ enum CP_VALUE
 	CP_icon_axis,            // reinit after change
 	CP_origin_x,             // reinit after change
 	CP_origin_y,             // reinit after change
-	
+
 	CP_can_touch,
 	CP_pointvalue,
 

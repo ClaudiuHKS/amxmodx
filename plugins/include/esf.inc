@@ -3,7 +3,7 @@
 [ Corona-Bytes.NET ] EvolutionX Core Plugin
 
 	(c) Corona - Bytes .NET coders :: coders@corona-bytes.net
-	
+
 		> 2005 Corona Bytes :: http://www.corona-bytes.net
 
 ***********************************************/

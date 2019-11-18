@@ -20,10 +20,10 @@
  * @note All paths in AMX Mod X natives are relative to the mod folder
  * unless otherwise noted.
  *
- * Most functions in AMX Mod X (at least, ones that deal with direct 
+ * Most functions in AMX Mod X (at least, ones that deal with direct
  * file manipulation) will support an alternate path specification.
  */
- 
+
 /**
  * Maximum path length.
  */

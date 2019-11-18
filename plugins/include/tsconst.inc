@@ -101,7 +101,7 @@ enum {
   TSW_TKNIFE,
 };
 
-/* 
+/*
 valid tsweaponid in TS_GiveWeapon
 
 1: "Glock 18"

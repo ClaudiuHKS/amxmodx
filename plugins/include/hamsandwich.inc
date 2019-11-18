@@ -12,9 +12,9 @@
 //
 
 /**
- * Ham Sandwich is a module that is used to hook and call virtual functions of 
+ * Ham Sandwich is a module that is used to hook and call virtual functions of
  *  entities.
- * Virtual functions are mod-specific functions.  This means that in order
+ * Virtual functions are mod-specific functions. This means that in order
  *  for this to work on a mod, it needs to be configured with the gamedata
  *  file.
  * Be very careful with parameter passing to these functions.
@@ -42,7 +42,7 @@
  * @param callback		The forward to call.
  * @param post			Whether or not to forward this in post.
  * @param specialbot	Whether or not to enable support for bot without "player" classname.
- * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
+ * @return 				Returns a handle to the forward. Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
 native HamHook:RegisterHam(Ham:function, const EntityClass[], const Callback[], Post = 0, bool:specialbot = false);
 
@@ -54,7 +54,7 @@ native HamHook:RegisterHam(Ham:function, const EntityClass[], const Callback[], 
  * @param function		The function to hook.
  * @param callback		The forward to call.
  * @param post			Whether or not to forward this in post.
- * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
+ * @return 				Returns a handle to the forward. Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
 stock HamHook:RegisterHamPlayer(Ham:function, const Callback[], Post = 0)
 {
@@ -72,7 +72,7 @@ stock HamHook:RegisterHamPlayer(Ham:function, const Callback[], Post = 0)
  * @param EntityId		The entity classname to hook.
  * @param callback		The forward to call.
  * @param post			Whether or not to forward this in post.
- * @return 				Returns a handle to the forward.  Use EnableHamForward/DisableHamForward to toggle the forward on or off.
+ * @return 				Returns a handle to the forward. Use EnableHamForward/DisableHamForward to toggle the forward on or off.
  */
 native HamHook:RegisterHamFromEntity(Ham:function, EntityId, const Callback[], Post = 0);
 
@@ -217,7 +217,7 @@ native SetHamReturnFloat(Float:value);
 native SetHamReturnVector(const Float:value[3]);
 
 /**
- * Sets the return value of a hook that returns an entity.  Set to -1 for null.
+ * Sets the return value of a hook that returns an entity. Set to -1 for null.
  * This needs to be used in conjunction with HAM_OVERRIDE or HAM_SUPERCEDE.
  *
  * @param value				The value to set the return to.
@@ -234,78 +234,78 @@ native SetHamReturnString(const value[]);
 
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are integers.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param value				The value to change it to.
  */
 native SetHamParamInteger(which, value);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are floats.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param value				The value to change it to.
  */
 native SetHamParamFloat(which, Float:value);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are Vectors.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param value				The value to change it to.
  */
 native SetHamParamVector(which, const Float:value[3]);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are entities.
  *
  * @note Due to a historical bug, the changes made by this native are not reflected in the corresponding post forward
  *       for backward compatibility reasons. Use SetHamParamEntity2 if this is required.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param value				The value to change it to.
  */
 native SetHamParamEntity(which, value);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are entities.
  *
  * @note Same as SetHamParamEntity except the changes made by this native are reflected in the corresponding post forward.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param value				The value to change it to.
  */
 native SetHamParamEntity2(which, value);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are strings.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param ouput				The value to change it to.
  */
 native SetHamParamString(which, const output[]);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are trace result handles.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param tr_handle			The value to change it to.
  */
 native SetHamParamTraceResult(which, tr_handle);
 
 /**
- * Sets a parameter on the fly of the current hook.  This has no effect in post hooks.
+ * Sets a parameter on the fly of the current hook. This has no effect in post hooks.
  * Use this on parameters that are trace result handles.
  *
- * @param which				Which parameter to change.  Starts at 1, and works up from the left to right.  1 is always "this".
+ * @param which				Which parameter to change. Starts at 1, and works up from the left to right. 1 is always "this".
  * @param iteminfo_handle	The value to change it to.
  */
 native SetHamParamItemInfo(which, iteminfo_handle);
@@ -330,7 +330,7 @@ native GetHamItemInfo(iteminfo_handle, HamItemInfo:type, any:...);
 native SetHamItemInfo(iteminfo_handle, HamItemInfo:type, any:...);
 
 /**
- * Creates an ItemInfo handle.  This value should never be altered.
+ * Creates an ItemInfo handle. This value should never be altered.
  * The handle can be used in Get/SetHamItemInfo.
  *
  * NOTE: You must call FreeHamItemInfo() on every handle made with CreateHamItemInfo().
@@ -339,8 +339,8 @@ native SetHamItemInfo(iteminfo_handle, HamItemInfo:type, any:...);
  */
 native CreateHamItemInfo();
 
-/** 
- * Frees an ItemIndo handle created with CreateHamItemInfo().  Do not call
+/**
+ * Frees an ItemIndo handle created with CreateHamItemInfo(). Do not call
  * this more than once per handle, or on handles not created through
  * CreateHamItemInfo().
  *
@@ -392,7 +392,7 @@ native set_pdata_cbase(id, offset, value, linuxdiff = 5, macdiff = 5);
 
 /**
  * This is similar to the get_pdata_cbase, however it does not dereference memory.
- * This is many times slower than get_pdata_cbase, and this should only be used 
+ * This is many times slower than get_pdata_cbase, and this should only be used
  * for testing and finding of offsets, not actual release quality plugins.
  * This will return an index of the corresponding cbase field in private data.
  * Returns -1 on a null entry. -2 on an invalid entry.

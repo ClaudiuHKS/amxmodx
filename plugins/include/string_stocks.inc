@@ -23,7 +23,7 @@
 /**
  * @global  Unless otherwise noted, all string functions which take in a
  *          writable buffer and maximum length should NOT have the null terminator INCLUDED
- *          in the length.  This means that this is valid:
+ *          in the length. This means that this is valid:
  *          copy(string, charsmax(string), ...)
  */
 
@@ -104,7 +104,7 @@ stock strbreak(const text[], Left[], leftLen, Right[], rightLen)
  * @param rightlen      Maximum length of the string part buffer.
  *
  * @return              -1 if no match was found; otherwise, an index into source
- *                      marking the first index after the searched text.  The
+ *                      marking the first index after the searched text. The
  *                      index is always relative to the start of the input string.
  */
 stock argbreak(const text[], left[], leftlen, right[], rightlen)
@@ -285,7 +285,7 @@ stock explode_string(const text[], const split[], buffers[][], maxStrings, maxSt
 
 /**
  * Joins an array of strings into one string, with a "join" string inserted in
- * between each given string.  This function complements ExplodeString.
+ * between each given string. This function complements ExplodeString.
  *
  * @param strings       An array of strings.
  * @param numStrings    Number of strings in the array.

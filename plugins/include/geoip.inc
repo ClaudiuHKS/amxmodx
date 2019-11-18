@@ -30,7 +30,7 @@
  * e.g: "US", "CA", etc.
  *
  * @param ip        The IP address to lookup.
- * @param result    The result buffer.  If the lookup does not succeed, the buffer is not modified.
+ * @param result    The result buffer. If the lookup does not succeed, the buffer is not modified.
  *
  * @return          true on a successful lookup, false on a failed lookup.
  */
@@ -41,7 +41,7 @@ native bool:geoip_code2_ex(const ip[], result[3]);
  * e.g: "USA", "cAN", etc.
  *
  * @param ip        The IP address to lookup.
- * @param result    The result buffer.  If the lookup does not succeed, the buffer is not modified.
+ * @param result    The result buffer. If the lookup does not succeed, the buffer is not modified.
  *
  * @return          true on a successful lookup, false on a failed lookup.
  */
@@ -78,7 +78,7 @@ native geoip_code2(const ip[], ccode[3]);
 native geoip_code3(const ip[], result[4]);
 
 /**
- * Lookup the full country name for the given IP address.  Sets the buffer to "error" on
+ * Lookup the full country name for the given IP address. Sets the buffer to "error" on
  * an unsuccessful lookup.
  *
  * @param ip        The IP address to lookup.

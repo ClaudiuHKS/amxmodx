@@ -26,7 +26,7 @@ enum floatround_method {
 };
 
 /**
- * Different units of measurement for angles 
+ * Different units of measurement for angles
  */
 enum anglemode {
 	radian = 0,

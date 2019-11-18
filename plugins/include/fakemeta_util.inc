@@ -4,7 +4,7 @@
  * For support and issues, see:
  * http://forums.alliedmods.net/showthread.php?t=28284
  */
- 
+
 
 /* Fakemeta Utilities
 *
@@ -648,7 +648,7 @@ stock fm_get_user_weapon_entity(id, wid = 0) {
 	new weap = wid, clip, ammo;
 	if (!weap && !(weap = get_user_weapon(id, clip, ammo)))
 		return 0;
-	
+
 	new class[32];
 	get_weaponname(weap, class, sizeof class - 1);
 
@@ -664,7 +664,7 @@ stock bool:fm_strip_user_gun(index, wid = 0, const wname[] = "") {
 		new weapon = wid, clip, ammo;
 		if (!weapon && !(weapon = get_user_weapon(index, clip, ammo)))
 			return false;
-		
+
 		get_weaponname(weapon, ent_class, sizeof ent_class - 1);
 	}
 
@@ -692,7 +692,7 @@ stock bool:fm_transfer_user_gun(index1, index2, wid = 0, const wname[] = "") {
 		new weapon = wid, clip, ammo;
 		if (!weapon && !(weapon = get_user_weapon(index1, clip, ammo)))
 			return false;
-		
+
 		get_weaponname(weapon, ent_class, sizeof ent_class - 1);
 	}
 

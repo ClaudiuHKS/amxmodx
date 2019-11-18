@@ -46,9 +46,9 @@
 #define MAX_PLAYERS 32 /* Maximum number of players AMX Mod X supports */
 
 /**
- * Maximum number of players the server supports 
+ * Maximum number of players the server supports
  */
-public stock const MaxClients; 
+public stock const MaxClients;
 
 /**
  * Current map name
@@ -56,7 +56,7 @@ public stock const MaxClients;
 public stock const MapName[MAX_MAPNAME_LENGTH];
 
 /**
- * Pass this into certain functions to act as a C++ NULL 
+ * Pass this into certain functions to act as a C++ NULL
  */
 public stock const NULL_STRING[1];
 

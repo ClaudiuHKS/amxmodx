@@ -31,7 +31,7 @@ enum {
   XMF_DEATH,
 };
 
-/* Use this function to register forwards 
+/* Use this function to register forwards
  * DEPRECATED
  */
 native register_statsfwd(ftype);
@@ -46,9 +46,9 @@ forward client_death(killer, victim, wpnindex, hitplace, TK);
 
 /* Custom Weapon Support */
 /* function will return index of new weapon */
-native custom_weapon_add(const wpnname[], melee = 0, const logname[] = ""); 
+native custom_weapon_add(const wpnname[], melee = 0, const logname[] = "");
 /* Function will pass damage done by this custom weapon to stats module and other plugins */
-native custom_weapon_dmg(weapon, att, vic, damage, hitplace = 0); 
+native custom_weapon_dmg(weapon, att, vic, damage, hitplace = 0);
 /* Function will pass info about custom weapon shot to stats module */
 native custom_weapon_shot(weapon, index); // weapon id, player id
 

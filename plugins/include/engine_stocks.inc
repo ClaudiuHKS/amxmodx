@@ -100,7 +100,7 @@ stock get_brush_entity_origin(ent, Float:orig[3])
 	entity_get_vector(ent, EV_VEC_origin, orig);
 	entity_get_vector(ent, EV_VEC_mins, Min);
 	entity_get_vector(ent, EV_VEC_maxs, Max);
-	
+
 	orig[0] += (Min[0] + Max[0]) * 0.5;
 	orig[1] += (Min[1] + Max[1]) * 0.5;
 	orig[2] += (Min[2] + Max[2]) * 0.5;
@@ -182,7 +182,7 @@ stock set_entity_flags(ent, flag, onoff)
 }
 
 /* If visible = 1, entity will be set to be visible, else invisible. */
-stock set_entity_visibility(entity, visible = 1) 
+stock set_entity_visibility(entity, visible = 1)
 {
 	entity_set_int(entity, EV_INT_effects, visible == 1 ? entity_get_int(entity, EV_INT_effects) & ~EF_NODRAW : entity_get_int(entity, EV_INT_effects) | EF_NODRAW);
 
@@ -190,7 +190,7 @@ stock set_entity_visibility(entity, visible = 1)
 }
 
 /* Returns 1 if entity is visible. */
-stock get_entity_visibility(entity) 
+stock get_entity_visibility(entity)
 {
 	return !(entity_get_int(entity, EV_INT_effects) & EF_NODRAW);
 }
@@ -207,22 +207,22 @@ stock get_user_velocity(entity, Float:vec[3])
 
 /* Backwards compatible */
 /* Hurts/Kills players in a sphere, like an explosion, Multiplier determines damage. */
-stock RadiusDamage(const Float:fExplodeAt[3], iDamageMultiplier, iRadiusMultiplier) 
+stock RadiusDamage(const Float:fExplodeAt[3], iDamageMultiplier, iRadiusMultiplier)
 {
 	return radius_damage(fExplodeAt, iDamageMultiplier, iRadiusMultiplier);
 }
 /* Gives you a velocity in the direction a player is looking, iVelocity is the multiplier. */
-stock VelocityByAim(iIndex, iVelocity, Float:vRetValue[3]) 
+stock VelocityByAim(iIndex, iVelocity, Float:vRetValue[3])
 {
 	return velocity_by_aim(iIndex, iVelocity, vRetValue);
 }
 /* Will return the contents of a point (inside map? in sky? outside map? etc.). */
-stock PointContents(const Float:fCheckAt[3]) 
+stock PointContents(const Float:fCheckAt[3])
 {
 	return point_contents(fCheckAt);
 }
 
-stock set_size(index, const Float:mins[3], const Float:maxs[3]) 
+stock set_size(index, const Float:mins[3], const Float:maxs[3])
 {
 	return entity_set_size(index, mins, maxs);
 }
